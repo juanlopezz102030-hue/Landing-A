@@ -1,0 +1,134 @@
+:root {
+  --green: #16945b;
+  --button-green: #25d366;
+  --text: #22272b;
+  --muted: #9a9a9a;
+  --link: #006cff;
+  --card: #f2f2f2;
+  --page: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-height: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--page);
+}
+
+.page {
+  min-height: 100vh;
+  padding: 34px 24px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  width: min(100%, 1210px);
+  min-height: 1655px;
+  margin: 0 auto;
+  padding: 128px 48px 96px;
+  border-radius: 58px;
+  background: var(--card);
+  box-shadow: 0 26px 38px rgba(0, 0, 0, .22);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whatsapp-badge {
+  width: 270px;
+  height: 270px;
+  margin-bottom: 188px;
+  border-radius: 50%;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,.24));
+}
+
+.whatsapp-badge svg { width: 100%; height: 100%; display: block; }
+.whatsapp-badge .bubble { fill: var(--button-green); stroke: #fff; stroke-width: 8; }
+.whatsapp-badge .phone { fill: #fff; }
+
+h1 {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(42px, 6.2vw, 82px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.brand {
+  margin: 170px 0 0;
+  color: var(--muted);
+  font-size: clamp(27px, 4vw, 48px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.instruction {
+  max-width: 820px;
+  margin: 168px 0 0;
+  font-size: clamp(30px, 4.1vw, 52px);
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+.button {
+  width: min(835px, 86%);
+  margin-top: 220px;
+  padding: 42px 32px 46px;
+  border-radius: 82px;
+  background: var(--button-green);
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1;
+  font-weight: 400;
+  box-shadow: 0 10px 18px rgba(0,0,0,.08);
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.button:hover { transform: translateY(-2px); filter: brightness(1.02); }
+.button:active { transform: translateY(0); }
+
+.footer {
+  margin-top: 215px;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.45;
+  color: #5e6268;
+}
+
+.footer p { margin: 0 0 20px; }
+.footer nav { margin-bottom: 0; }
+.footer a { color: var(--link); text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .page { padding: 18px 18px 40px; }
+  .card {
+    min-height: 640px;
+    padding: 70px 20px 48px;
+    border-radius: 28px;
+    box-shadow: 0 18px 28px rgba(0,0,0,.22);
+  }
+  .whatsapp-badge { width: 122px; height: 122px; margin-bottom: 78px; }
+  .brand { margin-top: 78px; }
+  .instruction { margin-top: 75px; max-width: 360px; }
+  .button { margin-top: 86px; padding: 21px 18px 23px; width: 86%; }
+  .footer { margin-top: 94px; }
+}
+.legal {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 48px 22px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.legal h1 { font-size: 42px; letter-spacing: 0; }
