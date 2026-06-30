@@ -1,6 +1,14 @@
-# Online Galaxy Landing
+# CAYO Uruguay Landing
 
-Landing HTML/CSS lista para subir a GitHub Pages o Vercel.
+Landing mobile-first en HTML/CSS, lista para subir a GitHub Pages o Vercel.
+
+## Archivos principales
+
+- `index.html`: landing principal con botón a WhatsApp.
+- `styles.css`: estilos mobile-first.
+- `assets/whatsapp-icon.png`: logo de WhatsApp usado en la tarjeta y favicon.
+- `politica-de-privacidad.html`: página legal básica.
+- `terminos-y-condiciones.html`: página legal básica.
 
 ## Cambiar WhatsApp
 
@@ -18,10 +26,18 @@ Ejemplo Argentina:
 const phoneNumber = "5491123456789";
 ```
 
-## Subir a GitHub
+## Cambiar el mensaje automático
 
-1. Crear un repositorio nuevo.
-2. Subir todos estos archivos.
-3. En Vercel, importar el repositorio.
-4. Framework preset: `Other` o `Static`.
+En `index.html`, podés editar esta línea:
+
+```js
+const message = "Hola, quiero iniciar una conversación.";
+```
+
+## Subir a GitHub y Vercel
+
+1. Creá un repositorio nuevo en GitHub.
+2. Subí todos los archivos de esta carpeta.
+3. En Vercel, importá el repositorio.
+4. Usá Framework Preset: `Other` o `Static`.
 5. Deploy.

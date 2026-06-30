@@ -2,36 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Online Galaxy | WhatsApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>CAYO Uruguay | WhatsApp</title>
   <meta name="description" content="Chateá con nosotros por WhatsApp." />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/whatsapp-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/whatsapp-icon.png" />
+  <link rel="preload" as="image" href="assets/whatsapp-icon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="page">
     <section class="card" aria-label="Contacto por WhatsApp">
-      <div class="whatsapp-badge" aria-hidden="true">
-        <svg viewBox="0 0 64 64" role="img">
-          <path class="bubble" d="M32.2 5.6C17.6 5.6 5.8 17.3 5.8 31.7c0 5 1.4 9.6 3.9 13.6L6.6 58.4l13.5-3.1c3.7 1.9 7.8 2.9 12.1 2.9 14.6 0 26.4-11.7 26.4-26.2S46.8 5.6 32.2 5.6Z"/>
-          <path class="phone" d="M24.6 18.5c-.7-1.5-1.4-1.5-2.1-1.5h-1.8c-.6 0-1.6.2-2.5 1.2-.8.9-3.2 3.1-3.2 7.6s3.3 8.8 3.8 9.4c.5.6 6.4 10.2 15.9 13.9 7.9 3.1 9.5 2.5 11.2 2.3 1.7-.3 5.5-2.2 6.3-4.4.8-2.1.8-4 .6-4.4-.2-.4-.8-.6-1.7-1.1l-5.9-2.9c-.9-.4-1.5-.6-2.1.4-.6.9-2.4 2.9-2.9 3.5-.5.6-1.1.7-2 .2-.9-.4-3.8-1.4-7.3-4.4-2.7-2.4-4.5-5.3-5.1-6.2-.5-.9-.1-1.4.4-1.8.4-.4.9-1.1 1.3-1.6.4-.6.6-.9.9-1.5.3-.6.1-1.1-.1-1.6l-2.7-6.1Z"/>
-        </svg>
-      </div>
+      <img class="whatsapp-logo" src="assets/whatsapp-icon.png" alt="" aria-hidden="true" />
 
       <h1>Chateá con nosotros</h1>
-      <p class="brand">© 2026 Online Galaxy.</p>
+      <p class="brand">© 2026 CAYO Uruguay.</p>
       <p class="instruction">Hacé click para iniciar la conversación por WhatsApp.</p>
-      <a id="whatsappButton" class="button" href="#" target="_blank" rel="noopener noreferrer">Chatear por WhatsApp</a>
+
+      <a id="whatsappButton" class="button" href="#" target="_blank" rel="noopener noreferrer">
+        Chatear por WhatsApp
+      </a>
     </section>
 
     <footer class="footer">
       <p>Todos los derechos reservados.</p>
-      <nav>
+      <nav aria-label="Enlaces legales">
         <a href="politica-de-privacidad.html">Política de Privacidad</a>
-        <span> · </span>
+        <span aria-hidden="true"> · </span>
         <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
       </nav>
-      <a href="mailto:Galaxydigital4286@gmail.com">Contacto: Galaxydigital4286@gmail.com</a>
+      <a class="email" href="mailto:Galaxydigital4286@gmail.com">Contacto: Galaxydigital4286@gmail.com</a>
     </footer>
   </main>
 
