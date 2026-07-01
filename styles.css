@@ -53,9 +53,13 @@ img { max-width: 100%; display: block; }
 
 .brand-logo {
   width: clamp(220px, 60vw, 360px);
-  aspect-ratio: 1 / 1;
+  height: clamp(220px, 60vw, 360px);
   object-fit: contain;
   margin: 0 auto 20px;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.12));
 }
 
 .profile-name {
@@ -180,6 +184,7 @@ h1 {
 
   .brand-logo {
     width: min(78vw, 250px);
+    height: min(78vw, 250px);
     margin-bottom: 16px;
   }
 
@@ -209,10 +214,7 @@ h1 {
     font-size: 18px;
   }
 
-  .button span {
-    white-space: normal;
-  }
-
+  .button span { white-space: normal; }
   .button-icon { width: 28px; height: 28px; }
 }
 
@@ -245,6 +247,7 @@ h1 {
 
   .brand-logo {
     width: 330px;
+    height: 330px;
   }
 
   .button {
@@ -272,6 +275,7 @@ h1 {
 
   .brand-logo {
     width: 340px;
+    height: 340px;
     margin-bottom: 22px;
   }
 
