@@ -12,7 +12,7 @@
   <link rel="preload" as="image" href="assets/verified-badge.png" />
   <link rel="preload" as="image" href="assets/whatsapp-icon.png" />
   <link rel="stylesheet" href="styles.css" />
-</head>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src='https://connect.facebook.net/en_US/fbevents.js';s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script');fbq('init','767728059169192');fbq('track','PageView');</script></head>
 <body>
   <main class="page">
     <section class="card" aria-label="Contacto por WhatsApp">
@@ -49,5 +49,5 @@
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     document.getElementById("whatsappButton").href = whatsappUrl;
   </script>
-</body>
+<script>document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('whatsappButton')||document.querySelector('.button');if(b)b.addEventListener('click',()=>fbq('trackCustom','WhatsAppClick'));});</script></body>
 </html>
