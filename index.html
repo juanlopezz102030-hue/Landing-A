@@ -394,7 +394,9 @@
         
         const phoneNumber = configuracionNumeros[numeroActivo] || configuracionNumeros["numero1"];
         const message = "Hola, quiero iniciar una conversación.";
-        const finalUrl = `https://wa.me/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        
+        // CORRECCIÓN VITAL: Formato API oficial de WhatsApp para compatibilidad móvil/PC
+        const finalUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
         if (btnApp) { 
           btnApp.href = finalUrl; 
