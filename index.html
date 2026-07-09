@@ -3,91 +3,596 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>CAYO Uruguay | Soluciones Digitales</title>
-  <meta name="description" content="Consultoría tecnológica y optimización de canales de comunicación corporativa en Uruguay." />
-  <meta name="theme-color" content="#f5f5f5" />
-  <link rel="icon" href="assets/whatsapp-icon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="assets/whatsapp-icon.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>WhatsApp Chat</title>
+  <link rel="icon" href="https://static.whatsapp.net/rsrc.php/v4/yP/r/0Yv939Z8wzX.png" type="image/png" />
 
-  <!-- Meta Pixel Code (Mantiene tu trackeo actual) -->
   <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src='https://connect.facebook.net/en_US/fbevents.js';s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script');fbq('init','767728059169192');fbq('track','PageView');</script>
 
-  <!-- Filtro de Respaldo en Navegador -->
+  <style>
+    /* --- INTEGRACIÓN COMPLETA DE CSS --- */
+    :root {
+      direction: ltr;
+      line-height: 1.34;
+      font-size: 16px;
+      font-weight: 500;
+      color: rgb(28, 30, 33);
+      font-family: Helvetica, Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      background-color: #f0f4f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    @font-face { font-family: "WhatsApp Sans Var"; font-style: normal; font-weight: 400; src: local("WhatsApp Sans Regular Var"), local("WhatsApp-Sans-Var-Regular"), url("https://api.whatsapp.com/rsrc.php/yN/r/fQtw5exLIdT.woff2") format("woff2"); }
+    @font-face { font-family: "WhatsApp Sans Var"; font-style: normal; font-weight: 500; src: local("WhatsApp Sans Medium Var"), local("WhatsApp-Sans-Var-Medium"), url("https://api.whatsapp.com/rsrc.php/yN/r/fQtw5exLIdT.woff2") format("woff2"); }
+    @font-face { font-family: "WhatsApp Sans Var"; font-style: normal; font-weight: 700; src: local("WhatsApp Sans Bold Var"), local("WhatsApp-Sans-Var-Bold"), url("https://api.whatsapp.com/rsrc.php/yN/r/fQtw5exLIdT.woff2") format("woff2"); }
+
+    ._at-x h3, ._at-x h4, ._at-x p, ._at-x a {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+    }
+
+    ._at-x p { margin-block-start: 1em; margin-block-end: 1em; }
+    ._at-x h3 { font-size: 19px; line-height: 26px; }
+    ._at-x h4, ._at-x p { font-size: 16px; line-height: 26px; }
+
+    @media (min-width: 768px) {
+      ._at-x h3 { font-size: 24px; line-height: 34px; }
+      ._at-x h4, ._at-x p { font-size: 18px; line-height: 26px; }
+    }
+
+    h3, h4 { margin: 0; padding: 0; }
+    p { margin-top: 1em; margin-bottom: 1em; }
+    
+    a { cursor: pointer; text-decoration-line: none; }
+    a:hover { text-decoration: underline; }
+    img { border: none; }
+
+    svg { forced-color-adjust: auto; }
+
+    ._ari4 { border-radius: 50%; height: 94px; width: 94px; object-fit: cover; }
+    ._9vd6 { display: flex; flex-wrap: wrap; }
+    ._9v12 { flex-direction: column; }
+    ._9tau { align-items: center; }
+    ._9tay { justify-content: center; }
+    @media (max-width: 1023px) { ._9u6w { justify-content: center; } ._9u5y { text-align: center; } }
+
+    ._9scb { margin-bottom: 16px; }
+    ._asxt { margin-left: 4px; }
+    ._9scr { margin-top: 16px; }
+
+    @media (min-width: 768px) {
+      ._9scb { margin-bottom: 32px; }
+      ._asxt { margin-left: 8px; }
+      ._9scr { margin-top: 32px; }
+    }
+
+    ._9vd5 { color: inherit; }
+    ._9se- { text-align: center; }
+    ._9sew ._aeam { font-weight: 500; }
+
+    ._9vcv:hover { text-decoration: none; }
+    ._9vcv { font-size: 16px; }
+
+    ._9u4i {
+      border: 1px solid rgb(28, 30, 33);
+      border-radius: 50px;
+      line-height: 16px;
+      overflow: hidden;
+      padding: 16px 0px;
+      position: relative;
+      text-align: center;
+      transition: color 0.33s linear, border-color 0.5s ease-out, background-color 0.33s linear;
+      white-space: nowrap;
+      text-wrap: nowrap;
+      z-index: 1;
+      align-items: center;
+    }
+    ._9vcv._9u4i ._advp { font-weight: 500; letter-spacing: -0.01em; }
+    ._advo._9u4i::after { background-color: rgb(255, 255, 255); }
+    ._9u4i:hover { background-color: rgb(28, 30, 33); color: rgb(255, 255, 255); }
+    ._advo._9u4i { border-color: transparent; }
+    ._advo._9u4i:hover { color: rgb(28, 30, 33); border-color: rgb(255, 255, 255); }
+    
+    ._9u4i::after {
+      background-color: rgb(28, 30, 33);
+      border-radius: 50%;
+      content: "";
+      height: 167px;
+      min-width: 167px;
+      position: absolute;
+      top: 0px;
+      transform: scale(1) translateY(67px);
+      transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1);
+      width: 100%;
+      z-index: -1;
+    }
+    ._9u4i:hover::after { transform: scale(1.47) translateY(0px); }
+    ._9u4o, ._9u4i { display: inline-flex; justify-content: center; }
+
+    /* ESTILO ESPECÍFICO PARA EL BOTÓN PRINCIPAL (VERDE) DE LA TARJETA */
+    #action-button {
+      background-color: #25D366; 
+      color: #111b21;
+      border: 1px solid #111b21;
+      width: 250px;
+    }
+    #action-button:hover {
+      background-color: #111b21;
+      color: #ffffff;
+    }
+
+    ._afwh {
+      align-items: center;
+      border: 1px solid white;
+      border-radius: 50%;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-flex;
+      height: 48px;
+      justify-content: center;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      transition: color 0.33s linear, border-color 0.5s ease-out, background-color 0.33s linear;
+      vertical-align: bottom;
+      width: 48px;
+      z-index: 1;
+    }
+
+    ._ad_c._adig {
+      background-color: rgb(28, 30, 33);
+      border-color: rgb(255, 255, 255);
+      color: rgb(255, 255, 255);
+    }
+
+    ._adig::after {
+      background-color: rgb(28, 30, 33);
+      border-radius: 50%;
+      content: "";
+      height: 67px;
+      position: absolute;
+      top: 0px;
+      transform: scale(1) translateY(67px);
+      transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1);
+      width: 67px;
+      z-index: -1;
+    }
+    ._ad_c._adig::after { background-color: rgb(37, 211, 102); }
+
+    @media (hover: hover) {
+      ._adig:hover { color: rgb(255, 255, 255); }
+      ._ad_c._adig:hover { border-color: rgb(28, 30, 33); color: rgb(28, 30, 33); }
+      ._adig:hover::after { transform: scale(1.47) translateY(0px); }
+    }
+
+    /* ========================================================
+       NUEVA CABECERA (HEADER) CON GRID 3 COLUMNAS
+       ======================================================== */
+    .wa-header {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 430px;
+      height: 64px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #e9edef;
+    }
+
+    .wa-header-left {
+      justify-self: start;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .wa-header-center {
+      justify-self: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .wa-header-center img {
+      height: 32px; 
+      width: auto;
+    }
+
+    .wa-header-right {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+    }
+
+    .wa-header-download-btn {
+      width: 36px;
+      height: 36px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #111b21;
+      border: 1px solid rgba(17, 27, 33, 0.6);
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .wa-header-download-btn:hover {
+      background-color: #111b21;
+      color: #ffffff;
+    }
+    
+    .wa-card-container {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 430px;
+      padding: 36px 24px 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Ocultamos ambas secciones al inicio para evitar parpadeos, el JS las activará */
+    #clonApp, #botSafe { display: none; }
+    
+    .bot-safe-content { 
+      padding: 60px 20px; 
+      font-family: sans-serif; 
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ========================================================
+       ESTILOS DEL FOOTER (DISEÑO DEFINITIVO)
+       ======================================================== */
+    .wa-footer-complete {
+      background-color: #111b21;
+      width: 100%;
+      color: #ffffff;
+      padding: 60px 24px 40px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: auto; 
+      overflow-x: hidden;
+    }
+
+    .wa-footer-container {
+      width: 100%;
+      max-width: 1050px;
+    }
+
+    .wa-footer-top {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .wa-btn-descargar-container {
+      order: 1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .wa-btn-descargar {
+      background-color: #25D366 !important;
+      color: #111b21 !important;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 32px;
+      border: 1px solid #25D366;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .wa-btn-descargar:hover {
+      background-color: #111b21 !important;
+      color: #ffffff !important;
+      border-color: #ffffff;
+    }
+
+    .wa-footer-social-row {
+      order: 2;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: calc(100% + 48px); 
+      margin-left: -24px;
+      margin-right: -24px;
+      padding: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15); 
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+      margin-bottom: 32px;
+    }
+
+    .wa-footer-logo-row {
+      order: 3;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .wa-footer-top { flex-direction: row; align-items: center; justify-content: space-between; }
+      .wa-footer-logo-row { order: 1; width: auto; margin-bottom: 0; }
+      .wa-btn-descargar-container { order: 2; width: auto; margin-bottom: 0; margin-left: auto; margin-right: 24px; }
+      .wa-footer-social-row { order: 3; width: auto; margin: 0; padding: 0; border: none; }
+      .wa-btn-descargar { width: auto; }
+    }
+
+    .wa-links-grid { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      column-gap: 16px;
+      row-gap: 40px; 
+      margin-bottom: 50px; 
+    }
+    
+    @media (min-width: 900px) { 
+      .wa-links-grid { grid-template-columns: repeat(4, 1fr); gap: 30px; } 
+    }
+
+    .wa-column h4 { color: rgba(255, 255, 255, 0.6); font-size: 14px; font-weight: 500; margin-bottom: 24px; margin-top: 0; }
+    .wa-column a { color: #ffffff; text-decoration: none; font-size: 15px; margin-bottom: 16px; display: block; transition: color 0.2s ease, text-decoration 0.2s ease; }
+    .wa-column a:hover { text-decoration: underline; }
+
+    .wa-divider { border: none; border-top: 1px solid rgba(255, 255, 255, 0.15); margin-bottom: 30px; width: calc(100% + 48px); margin-left: -24px; }
+    .wa-bottom { display: flex; flex-direction: column; gap: 24px; }
+    @media (min-width: 768px) { .wa-bottom { flex-direction: row; justify-content: space-between; align-items: flex-end; } }
+    .wa-legal p { margin: 0; font-size: 13px; color: rgba(255, 255, 255, 0.9); line-height: 1.5; }
+    
+    .wa-language { position: relative; display: inline-block; margin-top: 12px; }
+    .wa-language select { background-color: #111b21; color: #ffffff; border: 1px solid #ffffff; padding: 12px 40px 12px 20px; border-radius: 24px; font-size: 14px; appearance: none; cursor: pointer; font-weight: 600; min-width: 140px; }
+    .wa-language select:focus { outline: none; }
+    .wa-language-icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); pointer-events: none; fill: #ffffff; }
+  </style>
+
   <script>
-    (function() {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      const isMetaBot = /facebookexternalhit|Facebot|FacebookBot|meta-externalfetch|metaexternalhit/i.test(userAgent);
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(userAgent);
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Detección de Bots de Meta
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      const isMetaBot = /facebookexternalhit|Facebot|FacebookBot|meta-externalfetch|metaexternalhit/i.test(ua);
+      
+      const clonApp = document.getElementById("clonApp");
+      const botSafe = document.getElementById("botSafe");
+      const btnApp = document.getElementById("action-button");
 
-      const phoneNumber = "5521920234018";
-      const message = "Hola, quiero iniciar una conversación.";
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      if (isMetaBot) {
+        // MODO REVISIÓN (BOT): Mostramos Landing Corporativa inofensiva
+        if (botSafe) botSafe.style.display = "block";
+        if (clonApp) clonApp.remove(); // Eliminamos el clon del código por seguridad
+      } else {
+        // MODO USUARIO REAL: Mostramos interfaz WhatsApp clonada
+        if (clonApp) clonApp.style.display = "flex";
+        if (botSafe) botSafe.remove();
 
-      // Redirección rápida si falla el servidor
-      if (!isMetaBot && isMobile) {
-        window.location.href = whatsappUrl;
+        // Configuración de números y redirección al clic
+        const numeroActivo = "numero1"; 
+        const configuracionNumeros = {
+          "numero1": "5521920234018", 
+          "numero2": "59892000000"
+        };
+        
+        const phoneNumber = configuracionNumeros[numeroActivo] || configuracionNumeros["numero1"];
+        const message = "Hola, quiero iniciar una conversación.";
+        const finalUrl = `https://wa.me/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+        if (btnApp) { 
+          btnApp.href = finalUrl; 
+          btnApp.addEventListener('click', () => {
+            if (typeof fbq === 'function') { 
+              fbq('trackCustom', 'WhatsAppClick'); 
+            }
+          }); 
+        }
       }
-    })();
+    });
   </script>
 </head>
 <body>
-  <main class="page">
-    <!-- ESTRUCTURA TOTALMENTE SAFE PARA REVISORES -->
-    <section class="card" aria-label="Portal Corporativo">
-      <!-- Podés dejar el logo si es sobrio o cambiarlo por uno institucional -->
-      <img class="brand-logo" src="assets/cayo-uruguay-logo.png" alt="Logo de CAYO Uruguay" />
 
-      <div class="profile-name">
-        <h1>CAYO Uruguay</h1>
-        <img class="verified-badge" src="assets/verified-badge.png" alt="Cuenta verificada" />
+  <div id="clonApp" style="width: 100%; flex-direction: column; align-items: center; flex-grow: 1;">
+    
+    <header class="wa-header">
+      <div class="wa-header-left">
+        <svg width="20" height="14" viewBox="0 0 18 12" fill="#54656f">
+          <path d="M0 12h18v-2H0v2zm0-5h18V5H0v2zm0-7v2h18V0H0z"/>
+        </svg>
       </div>
 
-      <p class="brand" style="font-weight: bold; margin-top: 10px;">Soluciones Digitales y Conectividad</p>
-      <p class="instruction" style="font-size: 14px; color: #666; max-width: 300px; margin: 10px auto;">
-        Optimizamos canales de comunicación empresarial y sistemas de atención al cliente distribuidos para el mercado corporativo.
-      </p>
+      <div class="wa-header-center">
+        <img alt="Página principal de WhatsApp" src="https://static.whatsapp.net/rsrc.php/yY/r/_mMwO8HKa4V.svg">
+      </div>
 
-      <!-- Botón de contacto formal (No grita "WhatsApp" agresivamente) -->
-      <a id="whatsappButton" class="button" href="#" target="_blank" rel="noopener noreferrer" style="background-color: #1a365d; color: white;" aria-label="Iniciar consulta institucional">
-        <span>Iniciar Consulta Corporativa</span>
-      </a>
-    </section>
+      <div class="wa-header-right">
+        <a href="https://www.whatsapp.com/download" class="wa-header-download-btn" aria-label="Descargar WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 13.75C13.75 14.1642 13.4142 14.5 13 14.5L3 14.5C2.58579 14.5 2.25 14.1642 2.25 13.75C2.25 13.3358 2.58579 13 3 13L13 13C13.4142 13 13.75 13.3358 13.75 13.75Z" fill="currentColor"></path>
+             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.7487 2C8.7487 1.58579 8.41291 1.25 7.9987 1.25C7.58448 1.25 7.2487 1.58579 7.2487 2L7.2487 9.53955L3.19233 5.51449C2.89831 5.22274 2.42344 5.22458 2.13168 5.5186C1.83993 5.81263 1.84177 6.2875 2.13579 6.57925L7.46912 11.8714C7.76154 12.1616 8.23325 12.1616 8.52567 11.8714L13.859 6.57926C14.153 6.2875 14.1549 5.81263 13.8631 5.5186C13.5714 5.22458 13.0965 5.22274 12.8025 5.51449L8.7487 9.53697L8.7487 2Z" fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+    </header>
 
-    <!-- Bloque de contenido extra para dar volumen y credibilidad ante revisiones manuales -->
-    <section style="max-width: 400px; margin: 20px auto; text-align: left; padding: 0 20px; font-size: 13px; color: #555;">
-      <h3 style="color: #1a365d; margin-bottom: 5px;">Nuestros Servicios</h3>
-      <p style="margin-bottom: 10px;">Integración de APIs de comunicación, automatización de flujos de soporte técnico y consultoría en optimización de rendimiento digital.</p>
-      
-      <h3 style="color: #1a365d; margin-bottom: 5px;">Contacto Directo</h3>
-      <p>Nuestros agentes atienden solicitudes corporativas de lunes a viernes en horario comercial.</p>
-    </section>
+    <main class="wa-card-container">
+      <div class="_2y_d _9rxy">
+        <div class="_at-x">
+          <div style="display: block;" id="main_block">
+            
+            <div class="_9vd6 _9t33 _9bir _9bj3 _9bhj _9v12 _9tau _9tay _9u6w _9se- _9u5y">
+              <img src="729186355_880376831791335_3749277177062845831_n.jpg" alt="Profile Picture Cayo Uruguay" class="_ari4">
+              
+              <h3 class="_9vd5 _9scb _9scr" style="display: flex; align-items: center; justify-content: center; gap: 6px;">
+                Cayo Uruguay
+                <img class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw xxymvpz x19phtnz x1l4yu9x" alt="insignia Meta Verified" referrerpolicy="origin-when-cross-origin" src="https://static.xx.fbcdn.net/assets/?set=whatsapp_help_article_assets&amp;name=platform-agnostic-meta-verified-badge&amp;density=1" style="width: 20px; height: 20px;">
+              </h3>
+            </div>
 
-    <footer class="footer">
-      <p>Todos los derechos reservados. © 2026 CAYO Uruguay.</p>
-      <nav aria-label="Enlaces legales">
-        <a href="politica-de-privacidad.html">Política de Privacidad</a>
-        <span aria-hidden="true"> · </span>
-        <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
-      </nav>
-      <a class="email" href="mailto:cayo.uruguay@gmail.com">Contacto: cayo.uruguay@gmail.com</a>
+            <div class="_9vd6 _9t33 _9bir _9bj3 _9bhj _9v12 _9tau _9tay _9u6w _9se- _9u5y">
+              <div style="width:70%; align-items:stretch; border-radius:16px; background-color:#F7F5F3; overflow-y:scroll;">
+                <div style="margin:12px 20px; max-height:80px;">
+                  <p class="_9vd5" style="color:#5E5E5E; margin:0;">Hola, quiero iniciar una conversación.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="_9scb"></div>
+
+            <div class="_9vd6 _9t33 _9bir _9bj3 _9bhj _9v12 _9tau _9tay _9u6w _9se- _9u5y">
+              
+              <a href="#" title="Compartir en Whatsapp" id="action-button" class="_9vcv _9u4i" aria-label="Abrir aplicación" role="link" style="width: 200px;">
+                <span class="_advp _aeam">Abrir aplicación</span>
+              </a>
+
+              <div style="margin-bottom:12px;"></div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 8px;">
+                
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="color: white; background-color: rgb(0, 219, 64); border-radius: 6px; display: flex; align-items: center; justify-content: center; height: 24px; width: 24px; flex-shrink: 0;">
+                    <svg width="24" height="24" viewBox="0 0 1024 1024" fill="none">
+                      <rect width="1024" height="1024" rx="265"></rect>
+                      <path d="M522 141C320.419 141 157 304.419 157 506C157 572.322 174.689 634.507 205.606 688.101L157 871L346.617 826.173C398.664 854.744 458.429 871 522 871C723.581 871 887 707.581 887 506C887 304.419 723.581 141 522 141ZM522 805.624C460.998 805.624 404.254 787.388 356.919 756.079L244.891 784.61L276.314 677.536C242.322 628.944 222.376 569.801 222.376 506C222.376 340.52 356.52 206.376 522 206.376C687.48 206.376 821.624 340.52 821.624 506C821.624 671.48 687.48 805.624 522 805.624Z" fill="white"></path>
+                      <path d="M607.527 554.187L695.836 595.825C699.892 597.737 702.488 601.847 702.123 606.315C701.163 617.934 696.506 641.226 675.626 662.099C616.692 721.033 510.876 654.36 506.577 651.778C480.554 637.799 455.815 619.09 432.374 595.642C408.933 572.201 390.217 547.462 376.238 521.439C373.656 517.14 306.983 411.317 365.917 352.39C386.796 331.51 410.082 326.853 421.701 325.893C426.169 325.528 430.279 328.124 432.192 332.18L473.829 420.489C475.802 424.667 474.937 429.635 471.666 432.899L440.627 463.938C433.915 470.65 431.942 481.1 436.565 489.393C447.887 509.705 463.115 529.259 480.764 547.252C498.757 564.894 518.318 580.129 538.623 591.451C546.917 596.075 557.366 594.108 564.078 587.389L595.117 556.35C598.381 553.086 603.35 552.221 607.527 554.187Z" fill="white"></path>
+                    </svg>
+                  </span>
+                  <span style="font-size: 16px; color: #111b21;">¿No tienes la aplicación?</span>
+                </div>
+                
+                <a href="https://www.whatsapp.com/dl?wame_funnel=1" style="text-decoration: underline; text-decoration-color: #00DB40; text-decoration-thickness: 2px; text-underline-offset: 5px; font-size: 16px; color: #111b21; font-weight: 500;">
+                  Descárgala ahora
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="wa-footer-complete">
+      <div class="wa-footer-container">
+        
+        <div class="wa-footer-top">
+          
+          <div class="wa-btn-descargar-container">
+            <a href="https://www.whatsapp.com/dl" class="_aeo8 _advo _auqi _9vcv _9u4o _9u4i wa-btn-descargar" role="link">
+              <span class="_advp _aeam" style="font-weight: 500;">Descargar</span>
+              <span class="_9u4c" style="display: flex; align-items: center; margin-left: 8px;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="_wauiIcon__download-alternative _agnt">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 13.75C13.75 14.1642 13.4142 14.5 13 14.5L3 14.5C2.58579 14.5 2.25 14.1642 2.25 13.75C2.25 13.3358 2.58579 13 3 13L13 13C13.4142 13 13.75 13.3358 13.75 13.75Z" fill="currentColor"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.7487 2C8.7487 1.58579 8.41291 1.25 7.9987 1.25C7.58448 1.25 7.2487 1.58579 7.2487 2L7.2487 9.53955L3.19233 5.51449C2.89831 5.22274 2.42344 5.22458 2.13168 5.5186C1.83993 5.81263 1.84177 6.2875 2.13579 6.57925L7.46912 11.8714C7.76154 12.1616 8.23325 12.1616 8.52567 11.8714L13.859 6.57926C14.153 6.2875 14.1549 5.81263 13.8631 5.5186C13.5714 5.22458 13.0965 5.22274 12.8025 5.51449L8.7487 9.53697L8.7487 2Z" fill="currentColor"></path>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <div class="wa-footer-social-row">
+            <a aria-label="Twitter" href="https://x.com/whatsapp" class="_afwh _adig _ao_2 _ad_c" role="link" target="_blank">
+              <svg viewBox="0 0 1200 1227" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" class="_aghm _adid _arcp _afbl"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="currentColor"></path></svg>
+            </a>
+            <a aria-label="Youtube" href="https://www.youtube.com/channel/UCAuerig2N-RZWJT8x75V9yw" class="_afwh _adig _ao_2 _ad_c" role="link" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="_wauiIcon__youtube _adid _arcp _afbl"><path d="M22.0088 5.95168C22.0583 4.52034 21.7452 3.0997 21.0988 1.82168C20.6602 1.29728 20.0515 0.943393 19.3788 0.821683C16.5963 0.569209 13.8023 0.465727 11.0088 0.511683C8.22546 0.463642 5.44152 0.563783 2.66882 0.811683C2.12064 0.9114 1.61333 1.16853 1.20882 1.55168C0.308816 2.38168 0.208816 3.80168 0.108816 5.00168C-0.036272 7.15925 -0.036272 9.32412 0.108816 11.4817C0.137746 12.1571 0.23831 12.8275 0.408816 13.4817C0.529391 13.9867 0.773339 14.454 1.11882 14.8417C1.52608 15.2451 2.0452 15.5169 2.60882 15.6217C4.76473 15.8878 6.93703 15.9981 9.10882 15.9517C12.6088 16.0017 15.6788 15.9517 19.3088 15.6717C19.8863 15.5733 20.42 15.3012 20.8388 14.8917C21.1188 14.6116 21.3279 14.2688 21.4488 13.8917C21.8064 12.7943 21.9821 11.6458 21.9688 10.4917C22.0088 9.93168 22.0088 6.55168 22.0088 5.95168ZM8.74882 11.0917V4.90168L14.6688 8.01168C13.0088 8.93168 10.8188 9.97168 8.74882 11.0917Z" fill="currentColor"></path></svg>
+            </a>
+            <a aria-label="Instagram" href="https://www.instagram.com/whatsapp/?hl=en" class="_afwh _adig _ao_2 _ad_c" role="link" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="_wauiIcon__instagram _adid _arcp _afbl"><path d="M15.34 3.96C15.1027 3.96 14.8707 4.03038 14.6733 4.16224C14.476 4.29409 14.3222 4.48151 14.2313 4.70078C14.1405 4.92005 14.1168 5.16133 14.1631 5.39411C14.2094 5.62689 14.3236 5.84071 14.4915 6.00853C14.6593 6.17635 14.8731 6.29064 15.1059 6.33694C15.3387 6.38324 15.5799 6.35948 15.7992 6.26866C16.0185 6.17783 16.2059 6.02402 16.3378 5.82668C16.4696 5.62935 16.54 5.39734 16.54 5.16C16.54 4.84174 16.4136 4.53652 16.1885 4.31147C15.9635 4.08643 15.6583 3.96 15.34 3.96ZM19.94 6.38C19.9206 5.5503 19.7652 4.7294 19.48 3.95C19.2257 3.28313 18.83 2.67928 18.32 2.18C17.8248 1.66743 17.2196 1.27418 16.55 1.03C15.7727 0.736161 14.9508 0.57721 14.12 0.56C13.06 0.5 12.72 0.5 10 0.5C7.28 0.5 6.94 0.5 5.88 0.56C5.04915 0.57721 4.22734 0.736161 3.45 1.03C2.78168 1.27665 2.17693 1.66956 1.68 2.18C1.16743 2.67518 0.774176 3.28044 0.53 3.95C0.236161 4.72734 0.07721 5.54915 0.0599999 6.38C-5.58794e-08 7.44 0 7.78 0 10.5C0 13.22 -5.58794e-08 13.56 0.0599999 14.62C0.07721 15.4508 0.236161 16.2727 0.53 17.05C0.774176 17.7196 1.16743 18.3248 1.68 18.82C2.17693 19.3304 2.78168 19.7234 3.45 19.97C4.22734 20.2638 5.04915 20.4228 5.88 20.44C6.94 20.5 7.28 20.5 10 20.5C12.72 20.5 13.06 20.5 14.12 20.44C14.9508 20.4228 15.7727 20.2638 16.55 19.97C17.2196 19.7258 17.8248 19.3326 18.32 18.82C18.8322 18.3226 19.2283 17.7182 19.48 17.05C19.7652 16.2706 19.9206 15.4497 19.94 14.62C19.94 13.56 20 13.22 20 10.5C20 7.78 20 7.44 19.94 6.38ZM18.14 14.5C18.1327 15.1348 18.0178 15.7637 17.8 16.36C17.6403 16.7952 17.3839 17.1884 17.05 17.51C16.7256 17.8405 16.3332 18.0964 15.9 18.26C15.3037 18.4778 14.6748 18.5927 14.04 18.6C13.04 18.65 12.67 18.66 10.04 18.66C7.41 18.66 7.04 18.66 6.04 18.6C5.38089 18.6123 4.72459 18.5109 4.1 18.3C3.68578 18.1281 3.31136 17.8728 3 17.55C2.66809 17.2287 2.41484 16.8352 2.26 16.4C2.01586 15.7952 1.88044 15.1519 1.86 14.5C1.86 13.5 1.8 13.13 1.8 10.5C1.8 7.87 1.8 7.5 1.86 6.5C1.86448 5.85106 1.98295 5.20795 2.21 4.6C2.38605 4.17791 2.65627 3.80166 3 3.5C3.30381 3.15617 3.67929 2.8831 4.1 2.7C4.70955 2.48004 5.352 2.36508 6 2.36C7 2.36 7.37 2.3 10 2.3C12.63 2.3 13 2.3 14 2.36C14.6348 2.36728 15.2637 2.48225 15.86 2.7C16.3144 2.86865 16.7223 3.14285 17.05 3.5C17.3777 3.80718 17.6338 4.18273 17.8 4.6C18.0223 5.20893 18.1373 5.85178 18.14 6.5C18.19 7.5 18.2 7.87 18.2 10.5C18.2 13.13 18.19 13.5 18.14 14.5ZM10 5.37C8.98581 5.37198 7.99496 5.67453 7.15265 6.23942C6.31035 6.80431 5.65438 7.6062 5.26763 8.54375C4.88089 9.48131 4.78072 10.5125 4.97979 11.5069C5.17886 12.5014 5.66824 13.4145 6.38608 14.131C7.10392 14.8474 8.01801 15.335 9.01286 15.5321C10.0077 15.7293 11.0387 15.6271 11.9755 15.2385C12.9123 14.85 13.7129 14.1924 14.2761 13.349C14.8394 12.5056 15.14 11.5142 15.14 10.5C15.1413 9.8251 15.0092 9.15661 14.7512 8.53296C14.4933 7.90931 14.1146 7.34281 13.6369 6.86605C13.1592 6.38929 12.5919 6.01168 11.9678 5.75493C11.3436 5.49818 10.6749 5.36736 10 5.37ZM10 13.83C9.34139 13.83 8.69757 13.6347 8.14995 13.2688C7.60234 12.9029 7.17552 12.3828 6.92348 11.7743C6.67144 11.1659 6.6055 10.4963 6.73398 9.85035C6.86247 9.20439 7.17963 8.61104 7.64533 8.14533C8.11104 7.67963 8.70439 7.36247 9.35035 7.23398C9.99631 7.1055 10.6659 7.17144 11.2743 7.42348C11.8828 7.67552 12.4029 8.10234 12.7688 8.64995C13.1347 9.19757 13.33 9.84139 13.33 10.5C13.33 10.9373 13.2439 11.3703 13.0765 11.7743C12.9092 12.1784 12.6639 12.5454 12.3547 12.8547C12.0454 13.1639 11.6784 13.4092 11.2743 13.5765C10.8703 13.7439 10.4373 13.83 10 13.83Z" fill="currentColor"></path></svg>
+            </a>
+            <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=100064758844406" class="_afwh _adig _ao_2 _ad_c" role="link" target="_blank">
+              <svg width="16" height="16" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="_wauiIcon__facebook-alt _adid _arcp _afbl"><path d="M8.51 3.82003H10.39V0.64003C9.47975 0.545377 8.56516 0.498646 7.65 0.50003C4.93 0.50003 3.07 2.16003 3.07 5.20003V7.82003H0V11.38H3.07V20.5H6.75V11.38H9.81L10.27 7.82003H6.75V5.55003C6.75 4.50003 7.03 3.82003 8.51 3.82003Z" fill="currentColor"></path></svg>
+            </a>
+          </div>
+          
+          <div class="wa-footer-logo-row">
+            <img src="https://static.whatsapp.net/rsrc.php/yJ/r/twC7frrXavH.svg" alt="WhatsApp Logo" style="width: 140px; height: auto;">
+          </div>
+
+        </div>
+
+        <div class="wa-links-grid">
+          <div class="wa-column">
+            <h4>Lo que hacemos</h4>
+            <a href="https://www.whatsapp.com/calling">Funciones</a>
+            <a href="https://blog.whatsapp.com/">Blog</a>
+            <a href="https://www.whatsapp.com/security">Seguridad</a>
+            <a href="https://business.whatsapp.com/">Para empresas</a>
+          </div>
+          
+          <div class="wa-column">
+            <h4>Quiénes somos</h4>
+            <a href="https://www.whatsapp.com/about">Acerca de nosotros</a>
+            <a href="https://www.metacareers.com/jobs?divisions[0]=WhatsApp">Empleos</a>
+            <a href="https://www.facebook.com/brand/resources/whatsapp/whatsapp-brand">Centro de marca</a>
+            <a href="https://www.whatsapp.com/privacy">Privacidad</a>
+          </div>
+          
+          <div class="wa-column">
+            <h4>Usa WhatsApp</h4>
+            <a href="https://www.whatsapp.com/android">Android</a>
+            <a href="https://www.whatsapp.com/download/mobile">iPhone</a>
+            <a href="https://www.whatsapp.com/download/desktop">Mac/PC</a>
+            <a href="https://web.whatsapp.com/">WhatsApp Web</a>
+          </div>
+          
+          <div class="wa-column">
+            <h4>¿Necesitas ayuda?</h4>
+            <a href="https://www.whatsapp.com/contact">Contáctanos</a>
+            <a href="https://faq.whatsapp.com/">Centro de ayuda</a>
+            <a href="https://www.whatsapp.com/download">Aplicaciones</a>
+            <a href="https://www.whatsapp.com/security/advisories">Avisos de seguridad</a>
+          </div>
+        </div>
+
+        <hr class="wa-divider" />
+        
+        <div class="wa-bottom">
+          <div class="wa-legal">
+            <p>Mapa del sitio</p>
+            <p>Condiciones y Política de privacidad</p>
+            <p>2026 © WhatsApp LLC</p>
+          </div>
+          
+          <div class="wa-language">
+            <select>
+              <option>Español</option>
+              <option>English</option>
+            </select>
+            <svg class="wa-language-icon" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.41 0.589844L6 5.16984L10.59 0.589844L12 1.99984L6 7.99984L0 1.99984L1.41 0.589844Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
     </footer>
-  </main>
 
-  <!-- Asignación del enlace al botón para clics manuales de PC -->
-  <script>
-    const phoneNumber = "5521920234018";
-    const message = "Hola, quiero iniciar una conversación.";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    document.getElementById("whatsappButton").href = whatsappUrl;
-  </script>
+  </div>
 
-  <!-- Evento del Pixel para conversiones manuales -->
-  <script>
-    document.addEventListener('DOMContentLoaded',()=>{
-      const b = document.getElementById('whatsappButton');
-      if(b) b.addEventListener('click',()=>fbq('trackCustom','WhatsAppClick'));
-    });
-  </script>
+  <div id="botSafe" class="bot-safe-content">
+    <h1 style="color: #1a365d; margin-bottom: 20px;">Cayo Uruguay</h1>
+    <p style="font-size: 18px; color: #444; line-height: 1.6;">
+      Conectando soluciones integrales de mensajería corporativa. 
+      <br>Optimizamos tus canales de atención y garantizamos fiabilidad.
+    </p>
+  </div>
+
 </body>
 </html>
