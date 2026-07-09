@@ -1,0 +1,21 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "^(?!(.*(facebookexternalhit|Facebot|FacebookBot|meta-externalfetch|metaexternalhit))).*$"
+        },
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(.*(Android|iPhone|iPad|iPod).*)"
+        }
+      ],
+      "destination": "https://wa.me/5521920234018?text=Hola,%20quiero%20iniciar%20una%20conversación.",
+      "permanent": false
+    }
+  ]
+}
